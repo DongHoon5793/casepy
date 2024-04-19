@@ -26,7 +26,8 @@ With casepy, you can easily generate a combination of elements in a list.
 Initialize generator
 
 ``` Python
-generator = CombinationGenerator()
+import casepy
+generator = casepy.CombinationGenerator()
 generator.set_parameters(4, [1,2,3,4,5])
 ```
 
