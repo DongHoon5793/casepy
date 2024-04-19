@@ -65,4 +65,17 @@ class PermutationGenerator:
     def permutation_core(
         self, in_iterator: int, in_number_of_selection: int, element_list: list
     ) -> list:
-        pass
+        result_list = []
+        buff_element_list = element_list.copy()
+        number_of_element = len(buff_element_list)
+
+        for i in range(in_number_of_selection):
+            current_permutation = permutation(
+                number_of_element - i - 1, in_number_of_selection - i - 1
+            )
+            current_permutation_index = in_iterator // current_permutation
+            in_iterator = in_iterator % current_permutation
+            result_list.append(buff_element_list[current_permutation_index])
+            buff_element_list.pop(current_permutation_index)
+
+        return result_list
