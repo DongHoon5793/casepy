@@ -27,25 +27,36 @@ Initialize generator
 
 ``` Python
 import casepy
-generator = casepy.CombinationGenerator()
-generator.set_parameters(4, [1,2,3,4,5])
+generator_combination = casepy.CombinationGenerator()
+# generating combination cases
+generator_permutation = casepy.PermutationGenerator()
+# generating permutation cases
+
+generator_combination.set_parameters(4, [1,2,3,4,5])
+generator_permutation.set_parameters(4, [1,2,3,4,5])
 ```
 
 all_case()
 
 ``` Python
-all_case_list = generator.all_case()
+all_case_list = generator_combination.all_case()
 # [[1, 2, 3, 4], [1, 2, 3, 5], [1, 2, 4, 5], [1, 3, 4, 5], [2, 3, 4, 5]]
+all_case_list = generator_permutation.all_case()
+# [[1, 2, 3, 4], [1, 2, 3, 5], [1, 2, 4, 3], [1, 2, 4, 5], ...] total 120 cases
 ```
 random_case()
 ``` Python
-random_case = generator.random_case()
+random_case = generator_combination.random_case()
 # [1, 2, 4, 5] // It can be difference
+random_case = generator_permutation.random_case()
+# [2, 4, 3, 5] // It can be difference
 ```
 i_case
 ``` Python
-i_case_3 = generator.i_case(3)
+i_case_3 = generator_combination.i_case(3)
 # [1,3,4,5]
+i_case_3 = generator_permutation.i_case(3)
+# [1,2,4,5]
 ```
 
 ------------
