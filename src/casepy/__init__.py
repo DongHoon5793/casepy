@@ -1,2 +1,2 @@
-from .combination_generator import CombinationGenerator
-from .simple_methods import factorial, combination, permutation
+from . import combination_generator
+from .simple_methods import combination, factorial, permutation

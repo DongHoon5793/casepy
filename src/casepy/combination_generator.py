@@ -1,4 +1,4 @@
-import simple_methods
+from .simple_methods import combination
 import random
 
 
@@ -14,9 +14,7 @@ class CombinationGenerator:
 
         self.element_list_initialized = True
         self.number_of_selection_initialized = True
-        self.max_possible = simple_methods.combination(
-            len(element_list), in_number_of_selection
-        )
+        self.max_possible = combination(len(element_list), in_number_of_selection)
 
     def all_case(self) -> list:
         if not self.element_list_initialized:
@@ -73,9 +71,7 @@ class CombinationGenerator:
     ) -> list:
         result_list = []
         number_of_elements = len(element_list)
-        max_possible = simple_methods.combination(
-            number_of_elements, in_number_of_selection
-        )
+        max_possible = combination(number_of_elements, in_number_of_selection)
 
         if in_iterator >= max_possible:
             return []
@@ -85,9 +81,7 @@ class CombinationGenerator:
             if in_number_of_selection == 0:
                 break
 
-            test = simple_methods.combination(
-                number_of_elements - 1, in_number_of_selection - 1
-            )
+            test = combination(number_of_elements - 1, in_number_of_selection - 1)
 
             if in_iterator >= test:
                 in_iterator -= test
