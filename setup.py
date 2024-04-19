@@ -12,7 +12,7 @@ setup(
     author="DongHoon Kim",
     author_email="donghoon5793@gmail.com",
     package_dir={"": "src"},
-    packages=find_packages(include=["casepy", "casepy.*"]),
+    packages=find_packages(where="src"),
     # python_requires=">=2.7.0",
     install_requires=[],
 )
