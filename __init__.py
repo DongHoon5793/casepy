@@ -1,1 +1,1 @@
-from .src.combination_generator import CombinationGenerator
+from .src.casepy.combination_generator import CombinationGenerator
