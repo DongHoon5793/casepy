@@ -2,6 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="casepy",
+    py_modules=["casepy"],
     version="0.0.3a1",
     description="A Python package for generating cases in a list.",
     url="https://github.com/DongHoon5793/casepy",
