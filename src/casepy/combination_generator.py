@@ -7,6 +7,7 @@ class CombinationGenerator:
     def __init__(self):
         self.element_list_initialized = False
         self.number_of_selection_initialized = False
+        self.must_have_elements = False
 
     def set_parameters(self, in_number_of_selection: int, element_list: list):
         self.in_number_of_selection = in_number_of_selection
@@ -15,6 +16,22 @@ class CombinationGenerator:
         self.element_list_initialized = True
         self.number_of_selection_initialized = True
         self.max_possible = combination(len(element_list), in_number_of_selection)
+
+    def set_must_have_elements(self, in_elements_list: list):
+        if len(in_elements_list) == len(self.element_list):
+            # TODO: non-"" elements will be "" location in the in_partial_case.
+            pass
+
+        else:
+            self.must_have_elements = True
+            self.must_have_list = in_elements_list
+            for element in in_elements_list:
+                self.element_list.remove(element)
+
+            self.in_number_of_selection -= len(in_elements_list)
+            self.max_possible = combination(
+                len(self.element_list), self.in_number_of_selection
+            )
 
     def all_case(self) -> list:
         if not self.element_list_initialized:
@@ -97,6 +114,10 @@ class CombinationGenerator:
                 in_number_of_selection -= 1
 
                 target_iterator += 1
+
+        if self.must_have_elements:
+            for element in self.must_have_list:
+                result_list.append(element)
 
         return result_list
 
