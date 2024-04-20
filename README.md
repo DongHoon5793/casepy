@@ -5,11 +5,19 @@ A Python package for generating cases in a list.
 ## Methods
 
 - CombinationGenerator
-    - Generator Core class
+    - Generator Core class for combination
+- PermutationGenerator
+    - Generator Core class for permutation
+
 - set_parameters(a, b)
     - initialize generator with essential parameters
     - a: number of element to select (ex: 3)
     - b: list of element (ex: [1,2,3,4,5])
+- set_must_have_elements(list)
+    - set elements that should be included in results.
+    - list: list of necessary elements.
+    - ex) set_must_have_elements([2,5]) -> all results will include 2 and 5.
+
 - all_case
     - return list of all possible combinations based on the parameters.
 - random_case
