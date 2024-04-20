@@ -18,20 +18,15 @@ class CombinationGenerator:
         self.max_possible = combination(len(element_list), in_number_of_selection)
 
     def set_must_have_elements(self, in_elements_list: list):
-        if len(in_elements_list) == len(self.element_list):
-            # TODO: non-"" elements will be "" location in the in_partial_case.
-            pass
+        self.must_have_elements = True
+        self.must_have_list = in_elements_list
+        for element in in_elements_list:
+            self.element_list.remove(element)
 
-        else:
-            self.must_have_elements = True
-            self.must_have_list = in_elements_list
-            for element in in_elements_list:
-                self.element_list.remove(element)
-
-            self.in_number_of_selection -= len(in_elements_list)
-            self.max_possible = combination(
-                len(self.element_list), self.in_number_of_selection
-            )
+        self.in_number_of_selection -= len(in_elements_list)
+        self.max_possible = combination(
+            len(self.element_list), self.in_number_of_selection
+        )
 
     def all_case(self) -> list:
         if not self.element_list_initialized:
