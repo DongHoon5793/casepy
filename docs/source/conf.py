@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'casepy'
+copyright = '2024, DongHoon Kim'
+author = 'DongHoon Kim'
 
 release = '0.1'
 version = '0.1.0'
