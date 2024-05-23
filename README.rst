@@ -28,10 +28,6 @@ Using the n-th-permutation or n-th-combination, you can get the n-th permutation
 
 Documentation: |Documentation Status| 
 
-.. note::
-
-   This project is under active development.
-
 Installation
 ------------
 You can install casepy via pip from PyPI:
