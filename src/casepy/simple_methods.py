@@ -5,7 +5,7 @@ def factorial(in_target_number: int) -> int:
     return result
 
 
-def combination(in_number_of_elements: int, in_number_of_select: int) -> int:
+def combination_total(in_number_of_elements: int, in_number_of_select: int) -> int:
     if in_number_of_elements == in_number_of_select:
         return 1
     if in_number_of_elements < in_number_of_select:
@@ -20,25 +20,17 @@ def combination(in_number_of_elements: int, in_number_of_select: int) -> int:
     )
 
 
-def permutation(in_elements_info, in_number_of_select: int) -> int:
-    if type(in_elements_info) == int:
-        return permutation_core(in_elements_info, in_number_of_select)
-    else:
-        setted_elements_list = list(set(in_elements_info))
-        setted_elements_list.sort()
+def permutation_total(in_number_of_elements: int, in_number_of_select: int) -> int:
+    """
+    Return the number of all possible permutation cases (tranditional method).
 
-        element_counting = []
-        for element in setted_elements_list:
-            element_counting.append(in_elements_info.count(element))
+    Args:
+        in_number_of_elements (int): The number of elements.
+        in_number_of_select (int): The number of selections.
 
-        result = permutation_core(len(in_elements_info), in_number_of_select)
-        for count in element_counting:
-            result /= factorial(count)
-
-        return int(result)
-
-
-def permutation_core(in_number_of_elements: int, in_number_of_select: int) -> int:
+    Returns:
+        int: The number of all possible permutation cases.
+    """
     if in_number_of_elements == in_number_of_select:
         return factorial(in_number_of_elements)
     if in_number_of_elements < in_number_of_select:

@@ -1,4 +1,4 @@
-from .simple_methods import combination
+from .simple_methods import combination_total
 import random
 
 
@@ -15,7 +15,7 @@ class CombinationGenerator:
 
         self.element_list_initialized = True
         self.number_of_selection_initialized = True
-        self.max_possible = combination(len(element_list), in_number_of_selection)
+        self.max_possible = combination_total(len(element_list), in_number_of_selection)
 
     def set_must_have_elements(self, in_elements_list: list):
         self.must_have_elements = True
@@ -24,7 +24,7 @@ class CombinationGenerator:
             self.element_list.remove(element)
 
         self.in_number_of_selection -= len(in_elements_list)
-        self.max_possible = combination(
+        self.max_possible = combination_total(
             len(self.element_list), self.in_number_of_selection
         )
 
@@ -91,7 +91,9 @@ class CombinationGenerator:
             if i == start_index:
                 start_index += 1
             else:
-                result += combination(i, self.in_number_of_selection - start_index)
+                result += combination_total(
+                    i, self.in_number_of_selection - start_index
+                )
                 start_index += 1
             print(result, start_index)
         print("include_elements_iterator_list", include_elements_iterator_list)
@@ -103,7 +105,7 @@ class CombinationGenerator:
     ) -> list:
         result_list = []
         number_of_elements = len(element_list)
-        max_possible = combination(number_of_elements, in_number_of_selection)
+        max_possible = combination_total(number_of_elements, in_number_of_selection)
 
         if in_iterator >= max_possible:
             return []
@@ -113,7 +115,7 @@ class CombinationGenerator:
             if in_number_of_selection == 0:
                 break
 
-            test = combination(number_of_elements - 1, in_number_of_selection - 1)
+            test = combination_total(number_of_elements - 1, in_number_of_selection - 1)
 
             if in_iterator >= test:
                 in_iterator -= test

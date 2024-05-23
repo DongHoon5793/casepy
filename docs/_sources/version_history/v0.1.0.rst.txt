@@ -1,0 +1,52 @@
+New Features
+------------------------------------
+- :ref:`total_n_permutation <total_n_permutation>`
+
+   - Feature: Returns the total number of permutations of n elements.
+   - Example:
+
+      .. code-block:: python
+
+         >>> result = total_permutation([1, 2, 3, 3], 2)
+         >>> print(result)
+         7
+
+- :ref:`all_permutation <all_permutation>`
+   - Feature: Return a list of all permutations
+
+      .. code-block:: python
+
+         >>> result = all_permutation([1, 2, 3, 3], 2)
+         >>> print(result)
+         [[1, 2], [1, 3], [2, 1], [2, 3], [3, 1], [3, 2], [3, 3]]
+
+- :ref:`n_th_permutation <n_th_permutation>`
+   - Feature: Return the n-th permutation.
+
+      .. code-block:: python
+      
+         >>> result = n_th_permutation(3, [1, 2, 3, 3], 2)
+         >>> print(result)
+         [2, 3]
+
+- :ref:`n_to_m_th_permutation <n_to_m_th_permutation>`
+   - Feature: Return list of permutations from n-th to m-th.
+
+      .. code-block:: python
+
+         >>> result = n_to_m_th_permutation(2, 4, [1, 2, 3, 3], 2)
+         >>> print(result)
+         [[2,1],[2,3],[3,1]]
+
+- :ref:`PermutationGenerator <permutationGenerator>`
+   - Feature: A class that generates permutations.
+
+
+Modified Features
+------------------------------------
+
+Deleted Features
+------------------------------------
+
+Bug Fixes
+------------------------------------
