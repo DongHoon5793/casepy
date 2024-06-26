@@ -100,3 +100,92 @@ def n_to_m_th_permutation(
     instance.set_parameters(in_list, in_number_of_select)
 
     return instance.n_to_m_th_case(in_n_iterator, in_m_iterator)
+
+
+def total_n_combination(in_list: list, in_number_of_select: int) -> int:
+    """
+    Return the total number of combinations of the list.
+
+    .. _total_n_combination:
+
+    Args:
+        in_list (list): The list to be combined.
+        in_number_of_select (int): The number of elements to be selected.
+
+    Returns:
+        int: The total number of combinations of the list.
+
+    Examples:
+        >>> result = total_combination([1, 2, 3, 3], 2)
+        >>> print(result)
+        6
+    """
+    pass
+
+
+def all_permutation(in_list: list, in_number_of_select: int) -> list:
+    """
+    Return all combinations of the list.
+
+    .. _all_combination:
+
+    Args:
+        in_list (list): The list to be combined.
+        in_number_of_select (int): The number of elements to be selected.
+
+    Returns:
+        list: All combinations of the list.
+
+    Examples:
+        >>> result = all_combination([1, 2, 3, 3], 2)
+        >>> print(result)
+        [[1, 2], [1, 3], [2, 3]]
+    """
+    pass
+
+
+def n_th_combination(in_iterator: int, in_list: list, in_number_of_select: int) -> list:
+    """
+    Return the n-th combination of the list.
+
+    .. _n_th_combination:
+
+    Args:
+        in_iterator (int): Iterator n indicates the n-th combination.
+        in_list (list): The list to be combined.
+        in_number_of_select (int): The number of elements to be selected.
+
+    Returns:
+        list: The n-th combination of the list.
+
+    Examples:
+        >>> result = n_th_combination(2, [1, 2, 3, 3], 2)
+        >>> print(result)
+        [2, 3]
+    """
+    pass
+
+
+def n_to_m_th_combination(
+    in_n_iterator: int, in_m_iterator: int, in_list: list, in_number_of_select: int
+) -> list:
+    """
+    Return list of combinations from n-th to m-th.
+
+    .. _n_to_m_th_combination:
+
+    Args:
+        in_n_iterator (int): Iterator n indicates the n-th combination.
+        in_m_iterator (int): Iterator m indicates the m-th combination.
+        in_list (list): The list to be combined.
+        in_number_of_select (int): The number of elements to be selected.
+
+    Returns:
+        list: List of combination from n-th to m-th.
+
+    Examples:
+        >>> result = n_to_m_th_combination(2, 4, [1, 2, 3, 3], 2)
+        >>> print(result)
+        [[2, 3], [3, 1], [3, 2]]
+    """
+    pass
