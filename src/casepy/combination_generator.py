@@ -1,4 +1,4 @@
-from .simple_methods import combination_total
+from .simple_methods import combination_total, all_combinations_unique_elements
 import random
 
 
@@ -30,6 +30,32 @@ class CombinationGenerator:
         self.element_list_initialized = True
         self.number_of_selection_initialized = True
         self.max_possible = combination_total(len(element_list), in_number_of_selection)
+
+    def _select_type(in_number_of_selection: int, in_bin_dict: dict) -> list:
+        all_possible_selection = []
+
+        # Select all possible types
+        for i_length in range(in_number_of_selection):
+            all_possible_selection += all_combinations_unique_elements(
+                i_length + 1, list(in_bin_dict.keys())
+            )
+
+        # Filter out depending on the number of selection
+        result = []
+
+        for selected_types in all_possible_selection:
+            selected_types_possible_number = 0
+            for type in selected_types:
+                selected_types_possible_number += in_bin_dict[type]
+            if selected_types_possible_number >= in_number_of_selection:
+                result.append(selected_types)
+
+        return result
+
+    def n_th_case(self, in_iterator: int) -> list:
+        return self.combination_core(
+            in_iterator, self.in_number_of_selection, self.element_list
+        )
 
     def set_must_have_elements(self, in_elements_list: list):
         self.must_have_elements = True
