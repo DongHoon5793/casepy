@@ -1,15 +1,15 @@
-""""""
 """
 Utility functions for casepy.
 """
 
+
 def in_list_to_bin(in_list: list):
     """
     Convert a list to a bin list.
-    
+
     Args:
         in_list (list): The list to convert.
-        
+
     Returns:
         tuple: The list of the number of elements and the list of elements.
     """

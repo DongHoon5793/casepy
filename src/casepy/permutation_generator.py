@@ -33,7 +33,7 @@ class PermutationGenerator:
             element_list (list): The list of elements.
         """
         self.in_number_of_selection = in_number_of_selection
-        self.element_list = element_list
+        self.element_list = sorted(element_list)
 
         self.element_list_initialized = True
         self.number_of_selection_initialized = True
@@ -93,6 +93,158 @@ class PermutationGenerator:
         """
         return self.max_possible
 
+    def __next_permutation(self, in_list: list):
+        """
+        Return the next permutation of the list.
+
+        Args:
+            in_list (list): The list of elements.
+
+        Returns:
+            list: The next permutation of the list.
+        """
+        if in_list is None or len(in_list) == 0:
+            return None
+
+        left_elements = self.element_list.copy()
+        for i in in_list:
+            left_elements.remove(i)
+
+        for i in range(self.in_number_of_selection - 2, -1, -1):
+            if in_list[i] < in_list[i + 1]:
+                target_k = i
+                break
+        else:
+            return
+
+        target_l = 0
+        for i in range(self.in_number_of_selection - 1, -1, -1):
+            if in_list[target_k] < in_list[i]:
+                target_l = i
+                break
+
+        in_list[target_k], in_list[target_l] = in_list[target_l], in_list[target_k]
+
+        test = in_list[target_k + 1 :]
+        test.reverse()
+
+        return in_list[: target_k + 1] + test
+
+    def __next_permutation_partial(self, in_list: list):
+        head, tail = (
+            self.element_list[: self.in_number_of_selection],
+            self.element_list[self.in_number_of_selection :],
+        )
+        head = in_list
+        tail = self.element_list.copy()
+        for i in in_list:
+            tail.remove(i)
+        # print("Mine = ", head, tail)
+        right_head_indexes = range(self.in_number_of_selection - 1, -1, -1)
+        left_tail_indexes = range(len(tail))
+
+        while True:
+
+            # Starting from the right, find the first index of the head with
+            # value smaller than the maximum value of the tail - call it i.
+            pivot = tail[-1]
+            for i in range(self.in_number_of_selection - 1, -1, -1):
+                if head[i] < pivot:
+                    break
+                pivot = head[i]
+            else:
+                return
+            # Starting from the left, find the first value of the tail
+            # with a value greater than head[i] and swap.
+            for j in left_tail_indexes:
+                if tail[j] > head[i]:
+                    head[i], tail[j] = tail[j], head[i]
+                    break
+            # If we didn't find one, start from the right and find the first
+            # index of the head with a value greater than head[i] and swap.
+            else:
+                for j in right_head_indexes:
+                    if head[j] > head[i]:
+                        head[i], head[j] = head[j], head[i]
+                        break
+
+            # Reverse head[i + 1:] and swap it with tail[:r - (i + 1)]
+            tail += head[: i - self.in_number_of_selection : -1]  # head[i + 1:][::-1]
+            i += 1
+            head[i:], tail[:] = (
+                tail[: self.in_number_of_selection - i],
+                tail[self.in_number_of_selection - i :],
+            )
+            break
+        return head
+
+    def __yield_permutations(self):
+        # Split A into the first r items and the last r items
+        head, tail = (
+            self.element_list[: self.in_number_of_selection],
+            self.element_list[self.in_number_of_selection :],
+        )
+        right_head_indexes = range(self.in_number_of_selection - 1, -1, -1)
+        left_tail_indexes = range(len(tail))
+
+        while True:
+            # print("more = ", head, tail)
+            yield tuple(head)
+
+            # Starting from the right, find the first index of the head with
+            # value smaller than the maximum value of the tail - call it i.
+            pivot = tail[-1]
+            for i in range(self.in_number_of_selection - 1, -1, -1):
+                if head[i] < pivot:
+                    break
+                pivot = head[i]
+            else:
+                return
+            # Starting from the left, find the first value of the tail
+            # with a value greater than head[i] and swap.
+            for j in left_tail_indexes:
+                if tail[j] > head[i]:
+                    head[i], tail[j] = tail[j], head[i]
+                    break
+            # If we didn't find one, start from the right and find the first
+            # index of the head with a value greater than head[i] and swap.
+            else:
+                for j in right_head_indexes:
+                    if head[j] > head[i]:
+                        head[i], head[j] = head[j], head[i]
+                        break
+
+            # Reverse head[i + 1:] and swap it with tail[:r - (i + 1)]
+            tail += head[: i - self.in_number_of_selection : -1]  # head[i + 1:][::-1]
+            i += 1
+            head[i:], tail[:] = (
+                tail[: self.in_number_of_selection - i],
+                tail[self.in_number_of_selection - i :],
+            )
+
+    def all_case_new(self):
+        result_list = []
+
+        cal = self.__yield_permutations()
+        current_permutation = self.element_list[: self.in_number_of_selection]
+        result_list.append(current_permutation.copy())
+        result_list.append(current_permutation)
+        for i in range(1, self.max_possible - 1):
+
+            current_permutation = self.__next_permutation_partial(
+                current_permutation
+            ).copy()
+            result_list.append(current_permutation)
+            next(cal)
+            # print("----------------------")
+        # while True:
+        #     try:
+        #         result_list.append(next(cal))
+        #     except:
+        #         break
+
+        return result_list
+
     def all_case(self) -> list:
         """
         Return all possible permutations from a set parameters.
@@ -106,6 +258,7 @@ class PermutationGenerator:
             raise Exception("number_of_selection is not initialized")
 
         result_list = []
+
         for i in range(self.max_possible):
             result_list.append(self.__permutation_core(i))
         return result_list
