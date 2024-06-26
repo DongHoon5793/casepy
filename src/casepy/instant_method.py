@@ -1,4 +1,5 @@
 from .permutation_generator import *
+from .combination_generator import *
 
 
 def total_n_permutation(in_list: list, in_number_of_select: int) -> int:
@@ -120,10 +121,12 @@ def total_n_combination(in_list: list, in_number_of_select: int) -> int:
         >>> print(result)
         6
     """
-    pass
+    instance = CombinationGenerator()
+    instance.set_parameters(in_list, in_number_of_select)
+    return instance.possible_cases()
 
 
-def all_permutation(in_list: list, in_number_of_select: int) -> list:
+def all_combination(in_list: list, in_number_of_select: int) -> list:
     """
     Return all combinations of the list.
 
@@ -141,7 +144,10 @@ def all_permutation(in_list: list, in_number_of_select: int) -> list:
         >>> print(result)
         [[1, 2], [1, 3], [2, 3]]
     """
-    pass
+    instance = CombinationGenerator()
+    instance.set_parameters(in_list, in_number_of_select)
+
+    return instance.all_case()
 
 
 def n_th_combination(in_iterator: int, in_list: list, in_number_of_select: int) -> list:
@@ -163,7 +169,10 @@ def n_th_combination(in_iterator: int, in_list: list, in_number_of_select: int) 
         >>> print(result)
         [2, 3]
     """
-    pass
+    instance = CombinationGenerator()
+    instance.set_parameters(in_list, in_number_of_select)
+
+    return instance.n_th_case(in_iterator)
 
 
 def n_to_m_th_combination(
@@ -188,4 +197,7 @@ def n_to_m_th_combination(
         >>> print(result)
         [[2, 3], [3, 1], [3, 2]]
     """
-    pass
+    instance = CombinationGenerator()
+    instance.set_parameters(in_list, in_number_of_select)
+
+    return instance.n_to_m_th_case(in_n_iterator, in_m_iterator)
