@@ -5,6 +5,9 @@ import sys
 
 # sys.path.insert(0, os.path.abspath(os.path.join("..", "..")))
 sys.path.append(os.path.abspath("../../src"))
+import casepy as casepy
+
+print(casepy.__version__)
 
 # -- Project information
 
@@ -12,8 +15,8 @@ project = "casepy"
 copyright = "2024, DongHoon Kim"
 author = "DongHoon Kim"
 
-release = "0.1"
-version = "0.1.0"
+release = "0.2"
+version = "0.2.0"
 
 # -- General configuration
 

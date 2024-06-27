@@ -1,18 +1,8 @@
 New Features
 ------------------------------------
-- :ref:`total_n_permutation <total_n_permutation>`
 
-   - Feature: Returns the total number of permutations of n elements.
-   - Example:
-
-      .. code-block:: python
-
-         >>> result = total_permutation([1, 2, 3, 3], 2)
-         >>> print(result)
-         7
-
-- :ref:`all_permutation <all_permutation>`
-   - Feature: Return a list of all permutations
+- :ref:`all_permutation <all_permutations>`
+   - Feature: Return a list of all permutations.
 
       .. code-block:: python
 
@@ -29,7 +19,7 @@ New Features
          >>> print(result)
          [2, 3]
 
-- :ref:`n_to_m_th_permutation <n_to_m_th_permutation>`
+- :ref:`n_to_m_th_permutation <n_to_m_th_permutations>`
    - Feature: Return list of permutations from n-th to m-th.
 
       .. code-block:: python
