@@ -21,8 +21,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="New Features" href="v0.2.0.html" />
-    <link rel="prev" title="Version History" href="../version_history.html" /> 
+    <link rel="prev" title="New Features" href="v0.1.0.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -52,14 +51,14 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../version_history.html">Version History</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../version_history.html#may-2024">0.1.0 (May 2024)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../version_history.html#may-2024">0.1.0 (May 2024)</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../version_history.html#jun-2024">0.2.0 (Jun 2024)</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">New Features</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#modified-features">Modified Features</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#deleted-features">Deleted Features</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#bug-fixes">Bug Fixes</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../version_history.html#jun-2024">0.2.0 (Jun 2024)</a></li>
 </ul>
 </li>
 </ul>
@@ -81,7 +80,7 @@
           <li class="breadcrumb-item"><a href="../version_history.html">Version History</a></li>
       <li class="breadcrumb-item active">New Features</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/version_history/v0.1.0.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/version_history/v0.2.0.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -93,12 +92,12 @@
 <h1>New Features<a class="headerlink" href="#new-features" title="Link to this heading"></a></h1>
 <ul>
 <li><dl>
-<dt><a class="reference internal" href="../casepy.html#all-permutations"><span class="std std-ref">all_permutation</span></a></dt><dd><ul>
-<li><p>Feature: Return a list of all permutations.</p>
+<dt><a class="reference internal" href="../casepy.html#all-combinations"><span class="std std-ref">all_combinations</span></a></dt><dd><ul>
+<li><p>Feature: Return a list of all combinations.</p>
 <blockquote>
-<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">all_permutation</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">all_combinations</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="mi">3</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-<span class="go">[[1, 2], [1, 3], [2, 1], [2, 3], [3, 1], [3, 2], [3, 3]]</span>
+<span class="go">[[1, 2, 2], [1, 2, 3], [1, 2, 4], [1, 3, 4], [2, 2, 3], [2, 2, 4], [2, 3, 4]]</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -108,12 +107,12 @@
 </dl>
 </li>
 <li><dl>
-<dt><a class="reference internal" href="../casepy.html#n-th-permutation"><span class="std std-ref">n_th_permutation</span></a></dt><dd><ul>
-<li><p>Feature: Return the n-th permutation.</p>
+<dt><a class="reference internal" href="../casepy.html#n-th-combination"><span class="std std-ref">n_th_combination</span></a></dt><dd><ul>
+<li><p>Feature: Return the n-th combination.</p>
 <blockquote>
-<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">n_th_permutation</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">n_th_permutation</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="mi">3</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-<span class="go">[2, 3]</span>
+<span class="go">[1, 3, 4]</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -123,12 +122,12 @@
 </dl>
 </li>
 <li><dl>
-<dt><a class="reference internal" href="../casepy.html#n-to-m-th-permutations"><span class="std std-ref">n_to_m_th_permutation</span></a></dt><dd><ul>
-<li><p>Feature: Return list of permutations from n-th to m-th.</p>
+<dt><a class="reference internal" href="../casepy.html#n-to-m-th-combinations"><span class="std std-ref">n_to_m_th_combinations</span></a></dt><dd><ul>
+<li><p>Feature: Return list of combinations from n-th to m-th.</p>
 <blockquote>
-<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">n_to_m_th_permutation</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">n_to_m_th_combinations</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="mi">3</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-<span class="go">[[2,1],[2,3],[3,1]]</span>
+<span class="go">[[1, 2, 4], [1, 3, 4], [2, 2, 3]]</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -138,8 +137,8 @@
 </dl>
 </li>
 <li><dl class="simple">
-<dt><a class="reference internal" href="../casepy.html#permutationgenerator"><span class="std std-ref">PermutationGenerator</span></a></dt><dd><ul class="simple">
-<li><p>Feature: A class that generates permutations.</p></li>
+<dt><a class="reference internal" href="../casepy.html#combinationgenerator"><span class="std std-ref">CombinationGenerator</span></a></dt><dd><ul class="simple">
+<li><p>Feature: A class that generates combinations.</p></li>
 </ul>
 </dd>
 </dl>
@@ -148,6 +147,17 @@
 </section>
 <section id="modified-features">
 <h1>Modified Features<a class="headerlink" href="#modified-features" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Changed the name of the modules for permutation.</dt><dd><ul>
+<li><p>all_permutation -&gt; all_permutations</p></li>
+<li><p>n_to_m_th_permutation -&gt; n_to_m_th_permutations</p></li>
+<li><p>all_permutation -&gt; all_permutations</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
 </section>
 <section id="deleted-features">
 <h1>Deleted Features<a class="headerlink" href="#deleted-features" title="Link to this heading"></a></h1>
@@ -160,8 +170,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../version_history.html" class="btn btn-neutral float-left" title="Version History" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="v0.2.0.html" class="btn btn-neutral float-right" title="New Features" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="v0.1.0.html" class="btn btn-neutral float-left" title="New Features" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

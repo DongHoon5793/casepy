@@ -24,7 +24,7 @@ You can designate the number of elements you want to select.
 For instance, you can get all combinations and permutations of choosing 5 elements in a given list [1,1,2,3,4,5,5].
 
 The combination and permutation list is sorted by numerical or alphabetical.
-Using the :ref:`n-th-permutation <n_th_permutation>` or n-th-combination, you can get the n-th permutation or n-th combination of a given parameter without calculating 0-th to (n-1)-th case (current method).
+Using the :ref:`n-th-permutation <n_th_permutation>` or `n-th-combination <n-th-combination>`, you can get the n-th permutation or n-th combination of a given parameter without calculating 0-th to (n-1)-th case (current method).
 
 Documentation: |Documentation Status| 
 
@@ -39,6 +39,21 @@ You can install casepy via pip from PyPI:
 .. code-block:: console
    
       $ pip install casepy
+
+Quick Start
+------------
+.. code-block:: python
+   
+      import casepy
+
+      element_list = [1, 2, 2, 3, 4]
+
+      all_combinations = casepy.all_combinations(element_list, 2)
+      # [[1, 2], [1, 3], [1, 4], [2, 2], [2, 3], [2, 4], [3, 4]]
+
+      all_permutations = casepy.all_permutations(test_list, 2)
+      # [[1, 2], [1, 3], [1, 4], [2, 1], [2, 2], [2, 3], [2, 4], [3, 1], [3, 2], [3, 4], [4, 1], [4, 2], [4, 3]]
+
 
 Contents
 --------

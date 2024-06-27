@@ -3,7 +3,7 @@ Utility functions for casepy.
 """
 
 
-def list_to_bin_dict(in_list: list) -> dict:
+def list_to_bin_dict(in_list: list, is_list=False) -> dict:
     """
     Convert a list to a bin list.
 
@@ -21,5 +21,9 @@ def list_to_bin_dict(in_list: list) -> dict:
             result_dict[i] = 1
         else:
             result_dict[i] += 1
+
+    if is_list:
+
+        return [list(result_dict.values()), element_type_list]
 
     return result_dict

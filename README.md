@@ -34,3 +34,17 @@ You can install casepy via pip from PyPI:
 ``` console
 $ pip install casepy
 ```
+
+## Quick Start
+
+``` python
+import casepy
+
+element_list = [1, 2, 2, 3, 4]
+
+all_combinations = casepy.all_combinations(element_list, 2)
+# [[1, 2], [1, 3], [1, 4], [2, 2], [2, 3], [2, 4], [3, 4]]
+
+all_permutations = casepy.all_permutations(test_list, 2)
+# [[1, 2], [1, 3], [1, 4], [2, 1], [2, 2], [2, 3], [2, 4], [3, 1], [3, 2], [3, 4], [4, 1], [4, 2], [4, 3]]
+```

@@ -38,7 +38,7 @@ class CombinationGenerator:
         self.number_of_selection_initialized = True
         # self.max_possible = combination_total(len(element_list), in_number_of_selection)
 
-    def all_case(self):
+    def all_cases(self):
         """
         Return all possible combinations of the list.
 
@@ -77,13 +77,13 @@ class CombinationGenerator:
         return result
 
     def n_th_case(self, in_iterator: int) -> list:
-        return self.all_case()[in_iterator]
+        return self.all_cases()[in_iterator]
 
-    def n_to_m_th_case(self, in_n_iterator: int, in_m_iterator: int) -> list:
-        result = self.all_case()
-        if in_m_iterator > len(result):
+    def n_to_m_th_cases(self, in_n_iterator: int, in_m_iterator: int) -> list:
+        result = self.all_cases()
+        if in_m_iterator > len(result) - 1:
             print(
                 "The m-th iterator is larger than the number of all possible combinations."
             )
-            in_m_iterator = len(result)
-        return self.all_case()[in_n_iterator:in_m_iterator]
+            in_m_iterator = len(result) - 1
+        return self.all_cases()[in_n_iterator : in_m_iterator + 1]

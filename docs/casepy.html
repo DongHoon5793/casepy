@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Casepy package &mdash; casepy 0.1 documentation</title>
+  <title>Casepy package &mdash; casepy 0.2 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
 
@@ -15,7 +15,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/documentation_options.js?v=10f1778b"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -37,7 +37,7 @@
             casepy
           </a>
               <div class="version">
-                0.1.0
+                0.2.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -50,33 +50,29 @@
               <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Casepy package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#casepy-instant-methods">casepy (instant methods)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#casepy.instant_method.total_n_permutation"><code class="docutils literal notranslate"><span class="pre">instant_method.total_n_permutation()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#casepy.instant_method.all_permutation"><code class="docutils literal notranslate"><span class="pre">instant_method.all_permutation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#casepy.instant_method.all_permutations"><code class="docutils literal notranslate"><span class="pre">instant_method.all_permutations()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#casepy.instant_method.n_th_permutation"><code class="docutils literal notranslate"><span class="pre">instant_method.n_th_permutation()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#casepy.instant_method.n_to_m_th_permutation"><code class="docutils literal notranslate"><span class="pre">instant_method.n_to_m_th_permutation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#casepy.instant_method.n_to_m_th_permutations"><code class="docutils literal notranslate"><span class="pre">instant_method.n_to_m_th_permutations()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#casepy.instant_method.all_combinations"><code class="docutils literal notranslate"><span class="pre">instant_method.all_combinations()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#casepy.instant_method.n_th_combination"><code class="docutils literal notranslate"><span class="pre">instant_method.n_th_combination()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#casepy.instant_method.n_to_m_th_combinations"><code class="docutils literal notranslate"><span class="pre">instant_method.n_to_m_th_combinations()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#casepy-permutation-generator">casepy.permutation_generator</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#casepy.PermutationGenerator"><code class="docutils literal notranslate"><span class="pre">PermutationGenerator</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#casepy.PermutationGenerator.all_case"><code class="docutils literal notranslate"><span class="pre">PermutationGenerator.all_case()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#casepy.PermutationGenerator.all_case_new"><code class="docutils literal notranslate"><span class="pre">PermutationGenerator.all_case_new()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#casepy.PermutationGenerator.all_cases"><code class="docutils literal notranslate"><span class="pre">PermutationGenerator.all_cases()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#casepy.PermutationGenerator.n_th_case"><code class="docutils literal notranslate"><span class="pre">PermutationGenerator.n_th_case()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#casepy.PermutationGenerator.n_to_m_th_case"><code class="docutils literal notranslate"><span class="pre">PermutationGenerator.n_to_m_th_case()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#casepy.PermutationGenerator.possible_cases"><code class="docutils literal notranslate"><span class="pre">PermutationGenerator.possible_cases()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#casepy.PermutationGenerator.random_case"><code class="docutils literal notranslate"><span class="pre">PermutationGenerator.random_case()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#casepy.PermutationGenerator.n_to_m_th_cases"><code class="docutils literal notranslate"><span class="pre">PermutationGenerator.n_to_m_th_cases()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#casepy.PermutationGenerator.set_parameters"><code class="docutils literal notranslate"><span class="pre">PermutationGenerator.set_parameters()</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id1">casepy.permutation_generator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#casepy-combination-generator">casepy.combination_generator</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#casepy.CombinationGenerator"><code class="docutils literal notranslate"><span class="pre">CombinationGenerator</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#casepy.CombinationGenerator.all_case"><code class="docutils literal notranslate"><span class="pre">CombinationGenerator.all_case()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#casepy.CombinationGenerator.case_to_i"><code class="docutils literal notranslate"><span class="pre">CombinationGenerator.case_to_i()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#casepy.CombinationGenerator.combination_core"><code class="docutils literal notranslate"><span class="pre">CombinationGenerator.combination_core()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#casepy.CombinationGenerator.i_case"><code class="docutils literal notranslate"><span class="pre">CombinationGenerator.i_case()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#casepy.CombinationGenerator.random_case"><code class="docutils literal notranslate"><span class="pre">CombinationGenerator.random_case()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#casepy.CombinationGenerator.set_must_have_elements"><code class="docutils literal notranslate"><span class="pre">CombinationGenerator.set_must_have_elements()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#casepy.CombinationGenerator.all_cases"><code class="docutils literal notranslate"><span class="pre">CombinationGenerator.all_cases()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#casepy.CombinationGenerator.n_th_case"><code class="docutils literal notranslate"><span class="pre">CombinationGenerator.n_th_case()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#casepy.CombinationGenerator.n_to_m_th_cases"><code class="docutils literal notranslate"><span class="pre">CombinationGenerator.n_to_m_th_cases()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#casepy.CombinationGenerator.set_parameters"><code class="docutils literal notranslate"><span class="pre">CombinationGenerator.set_parameters()</span></code></a></li>
 </ul>
 </li>
@@ -118,36 +114,10 @@
 <section id="casepy-instant-methods">
 <h2>casepy (instant methods)<a class="headerlink" href="#casepy-instant-methods" title="Link to this heading"></a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="casepy.instant_method.total_n_permutation">
-<span class="sig-prename descclassname"><span class="pre">instant_method.</span></span><span class="sig-name descname"><span class="pre">total_n_permutation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_number_of_select</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></span></span><a class="headerlink" href="#casepy.instant_method.total_n_permutation" title="Link to this definition"></a></dt>
-<dd><p>Return the total number of permutations of the list.</p>
-<dl class="field-list simple" id="total-n-permutation">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>in_list</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><em>list</em></a>) – The list to be permuted.</p></li>
-<li><p><strong>in_number_of_select</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – The number of elements to be selected.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The total number of permutations of the list.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
-</dd>
-</dl>
-<p class="rubric">Examples</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">total_permutation</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-<span class="go">7</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="casepy.instant_method.all_permutation">
-<span class="sig-prename descclassname"><span class="pre">instant_method.</span></span><span class="sig-name descname"><span class="pre">all_permutation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_number_of_select</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#casepy.instant_method.all_permutation" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="casepy.instant_method.all_permutations">
+<span class="sig-prename descclassname"><span class="pre">instant_method.</span></span><span class="sig-name descname"><span class="pre">all_permutations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_number_of_select</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#casepy.instant_method.all_permutations" title="Link to this definition"></a></dt>
 <dd><p>Return all permutations of the list.</p>
-<dl class="field-list simple" id="all-permutation">
+<dl class="field-list simple" id="all-permutations">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>in_list</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><em>list</em></a>) – The list to be permuted.</p></li>
@@ -197,10 +167,10 @@
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="casepy.instant_method.n_to_m_th_permutation">
-<span class="sig-prename descclassname"><span class="pre">instant_method.</span></span><span class="sig-name descname"><span class="pre">n_to_m_th_permutation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_m_iterator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_number_of_select</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#casepy.instant_method.n_to_m_th_permutation" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="casepy.instant_method.n_to_m_th_permutations">
+<span class="sig-prename descclassname"><span class="pre">instant_method.</span></span><span class="sig-name descname"><span class="pre">n_to_m_th_permutations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_m_iterator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_number_of_select</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#casepy.instant_method.n_to_m_th_permutations" title="Link to this definition"></a></dt>
 <dd><p>Return list of permutations from n-th to m-th.</p>
-<dl class="field-list simple" id="n-to-m-th-permutation">
+<dl class="field-list simple" id="n-to-m-th-permutations">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>in_n_iterator</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – Iterator n indicates the n-th permutation.</p></li>
@@ -224,6 +194,87 @@
 </div>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="casepy.instant_method.all_combinations">
+<span class="sig-prename descclassname"><span class="pre">instant_method.</span></span><span class="sig-name descname"><span class="pre">all_combinations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_number_of_select</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#casepy.instant_method.all_combinations" title="Link to this definition"></a></dt>
+<dd><p>Return all combinations of the list.</p>
+<dl class="field-list simple" id="all-combinations">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>in_list</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><em>list</em></a>) – The list to be combined.</p></li>
+<li><p><strong>in_number_of_select</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – The number of elements to be selected.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>All combinations of the list.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)">list</a></p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">all_combination</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="go">[[1, 2], [1, 3], [2, 3]]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="casepy.instant_method.n_th_combination">
+<span class="sig-prename descclassname"><span class="pre">instant_method.</span></span><span class="sig-name descname"><span class="pre">n_th_combination</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_number_of_select</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#casepy.instant_method.n_th_combination" title="Link to this definition"></a></dt>
+<dd><p>Return the n-th combination of the list.</p>
+<dl class="field-list simple" id="n-th-combination">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>in_iterator</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – Iterator n indicates the n-th combination.</p></li>
+<li><p><strong>in_list</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><em>list</em></a>) – The list to be combined.</p></li>
+<li><p><strong>in_number_of_select</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – The number of elements to be selected.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The n-th combination of the list.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)">list</a></p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">n_th_combination</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="go">[2, 3]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="casepy.instant_method.n_to_m_th_combinations">
+<span class="sig-prename descclassname"><span class="pre">instant_method.</span></span><span class="sig-name descname"><span class="pre">n_to_m_th_combinations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_m_iterator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_number_of_select</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#casepy.instant_method.n_to_m_th_combinations" title="Link to this definition"></a></dt>
+<dd><p>Return list of combinations from n-th to m-th.</p>
+<dl class="field-list simple" id="n-to-m-th-combinations">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>in_n_iterator</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – Iterator n indicates the n-th combination.</p></li>
+<li><p><strong>in_m_iterator</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – Iterator m indicates the m-th combination.</p></li>
+<li><p><strong>in_list</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><em>list</em></a>) – The list to be combined.</p></li>
+<li><p><strong>in_number_of_select</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – The number of elements to be selected.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of combination from n-th to m-th.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)">list</a></p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">n_to_m_th_combinations</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="go">[[2, 3], [3, 1], [3, 2]]</span>
+</pre></div>
+</div>
+</dd></dl>
+
 </section>
 <section id="casepy-permutation-generator">
 <h2>casepy.permutation_generator<a class="headerlink" href="#casepy-permutation-generator" title="Link to this heading"></a></h2>
@@ -237,8 +288,8 @@ As default, the n-th permutation is generated by the lexicographic order.
 But, if the priority of the elements is given, the permutation is generated by the given priority.</p>
 <p>The elements can be duplicated in the list.</p>
 <dl class="py method" id="permutationgenerator">
-<dt class="sig sig-object py" id="casepy.PermutationGenerator.all_case">
-<span class="sig-name descname"><span class="pre">all_case</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#casepy.PermutationGenerator.all_case" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="casepy.PermutationGenerator.all_cases">
+<span class="sig-name descname"><span class="pre">all_cases</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#casepy.PermutationGenerator.all_cases" title="Link to this definition"></a></dt>
 <dd><p>Return all possible permutations from a set parameters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -249,11 +300,6 @@ But, if the priority of the elements is given, the permutation is generated by t
 </dd>
 </dl>
 </dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="casepy.PermutationGenerator.all_case_new">
-<span class="sig-name descname"><span class="pre">all_case_new</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#casepy.PermutationGenerator.all_case_new" title="Link to this definition"></a></dt>
-<dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="casepy.PermutationGenerator.n_th_case">
@@ -273,8 +319,8 @@ But, if the priority of the elements is given, the permutation is generated by t
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="casepy.PermutationGenerator.n_to_m_th_case">
-<span class="sig-name descname"><span class="pre">n_to_m_th_case</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_n_iterator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_m_iterator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#casepy.PermutationGenerator.n_to_m_th_case" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="casepy.PermutationGenerator.n_to_m_th_cases">
+<span class="sig-name descname"><span class="pre">n_to_m_th_cases</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_n_iterator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_m_iterator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#casepy.PermutationGenerator.n_to_m_th_cases" title="Link to this definition"></a></dt>
 <dd><p>Return the n-th to m-th permutations.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -288,38 +334,6 @@ But, if the priority of the elements is given, the permutation is generated by t
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)">list</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="casepy.PermutationGenerator.possible_cases">
-<span class="sig-name descname"><span class="pre">possible_cases</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#casepy.PermutationGenerator.possible_cases" title="Link to this definition"></a></dt>
-<dd><p>Return the number of all possible cases.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>The number of all possible cases.</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="casepy.PermutationGenerator.random_case">
-<span class="sig-name descname"><span class="pre">random_case</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">return_i</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#casepy.PermutationGenerator.random_case" title="Link to this definition"></a></dt>
-<dd><p>Return a random possible permutation.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>return_i</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a><em>, </em><em>optional</em>) – Return the iterator number indicating n-th permutation. Defaults to False.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The iterator number indicating n-th permutation. (return_i=True
-list: A random possible permutation.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a> (optional)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -341,8 +355,8 @@ list: A random possible permutation.</p>
 </dd></dl>
 
 </section>
-<section id="id1">
-<h2>casepy.permutation_generator<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<section id="casepy-combination-generator">
+<h2>casepy.combination_generator<a class="headerlink" href="#casepy-combination-generator" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="casepy.CombinationGenerator">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">casepy.</span></span><span class="sig-name descname"><span class="pre">CombinationGenerator</span></span><a class="headerlink" href="#casepy.CombinationGenerator" title="Link to this definition"></a></dt>
@@ -353,39 +367,42 @@ As default, the n-th combination is generated by the lexicographic order.
 But, if the priority of the elements is given, the combination is generated by the given priority.</p>
 <p>The elements can be duplicated in the list.</p>
 <dl class="py method" id="combinationgenerator">
-<dt class="sig sig-object py" id="casepy.CombinationGenerator.all_case">
-<span class="sig-name descname"><span class="pre">all_case</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#casepy.CombinationGenerator.all_case" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="casepy.CombinationGenerator.all_cases">
+<span class="sig-name descname"><span class="pre">all_cases</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#casepy.CombinationGenerator.all_cases" title="Link to this definition"></a></dt>
+<dd><p>Return all possible combinations of the list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>All possible combinations of the list.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)">list</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="casepy.CombinationGenerator.n_th_case">
+<span class="sig-name descname"><span class="pre">n_th_case</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_iterator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#casepy.CombinationGenerator.n_th_case" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="casepy.CombinationGenerator.case_to_i">
-<span class="sig-name descname"><span class="pre">case_to_i</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_case</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></span></span><a class="headerlink" href="#casepy.CombinationGenerator.case_to_i" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="casepy.CombinationGenerator.combination_core">
-<span class="sig-name descname"><span class="pre">combination_core</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_iterator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_number_of_selection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">element_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#casepy.CombinationGenerator.combination_core" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="casepy.CombinationGenerator.i_case">
-<span class="sig-name descname"><span class="pre">i_case</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_iterator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#casepy.CombinationGenerator.i_case" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="casepy.CombinationGenerator.random_case">
-<span class="sig-name descname"><span class="pre">random_case</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">return_i</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#casepy.CombinationGenerator.random_case" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="casepy.CombinationGenerator.set_must_have_elements">
-<span class="sig-name descname"><span class="pre">set_must_have_elements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_elements_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#casepy.CombinationGenerator.set_must_have_elements" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="casepy.CombinationGenerator.n_to_m_th_cases">
+<span class="sig-name descname"><span class="pre">n_to_m_th_cases</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_n_iterator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_m_iterator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#casepy.CombinationGenerator.n_to_m_th_cases" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="casepy.CombinationGenerator.set_parameters">
 <span class="sig-name descname"><span class="pre">set_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_number_of_selection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">element_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#casepy.CombinationGenerator.set_parameters" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Initialize the CombinationGenerator with the given number of selections and the element list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>in_number_of_selection</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – The number of selections.</p></li>
+<li><p><strong>element_list</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><em>list</em></a>) – The list of elements.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 

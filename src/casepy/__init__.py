@@ -8,4 +8,4 @@ from .simple_methods import combination_total, permutation_total
 
 from .utils import list_to_bin_dict
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"

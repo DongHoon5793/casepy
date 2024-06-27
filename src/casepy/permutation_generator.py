@@ -38,7 +38,7 @@ class PermutationGenerator:
         self.element_list_initialized = True
         self.number_of_selection_initialized = True
         self.max_possible = self.__duplicated_case_recursive(
-            in_list_to_bin(self.element_list)[0], self.in_number_of_selection
+            list_to_bin_dict(self.element_list, True)[0], self.in_number_of_selection
         )
 
     def __duplicated_case_recursive(self, in_list: list, in_number_of_select: int):
@@ -69,7 +69,7 @@ class PermutationGenerator:
                 )
         return result_sum
 
-    def all_case(self) -> list:
+    def all_cases(self) -> list:
         """
         Return all possible permutations from a set parameters.
 
@@ -103,7 +103,7 @@ class PermutationGenerator:
 
         return self.__permutation_core(in_iterator)
 
-    def n_to_m_th_case(self, in_n_iterator: int, in_m_iterator: int) -> list:
+    def n_to_m_th_cases(self, in_n_iterator: int, in_m_iterator: int) -> list:
         """
         Return the n-th to m-th permutations.
 
@@ -165,7 +165,7 @@ class PermutationGenerator:
         if not in_iterator < self.max_possible:
             return []
 
-        bin_list, element_list = list_to_bin_dict(self.element_list)
+        bin_list, element_list = list_to_bin_dict(self.element_list, True)
 
         result_iterator = self.__permutation_recursive(
             in_iterator, bin_list, self.in_number_of_selection

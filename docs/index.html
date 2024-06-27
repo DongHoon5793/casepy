@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to casepy! &mdash; casepy 0.1 documentation</title>
+  <title>Welcome to casepy! &mdash; casepy 0.2 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
 
@@ -15,7 +15,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/documentation_options.js?v=10f1778b"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
             casepy
           </a>
               <div class="version">
-                0.1.0
+                0.2.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -86,7 +86,7 @@
 You can designate the number of elements you want to select.
 For instance, you can get all combinations and permutations of choosing 5 elements in a given list [1,1,2,3,4,5,5].</p>
 <p>The combination and permutation list is sorted by numerical or alphabetical.
-Using the <a class="reference internal" href="casepy.html#n-th-permutation"><span class="std std-ref">n-th-permutation</span></a> or n-th-combination, you can get the n-th permutation or n-th combination of a given parameter without calculating 0-th to (n-1)-th case (current method).</p>
+Using the <a class="reference internal" href="casepy.html#n-th-permutation"><span class="std std-ref">n-th-permutation</span></a> or <cite>n-th-combination &lt;n-th-combination&gt;</cite>, you can get the n-th permutation or n-th combination of a given parameter without calculating 0-th to (n-1)-th case (current method).</p>
 <p>Documentation: <a class="reference external" href="http://casepy.readthedocs.io/?badge=latest"><img alt="Documentation Status" src="https://readthedocs.org/projects/casepy/badge/?version=latest" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -99,39 +99,49 @@ Using the <a class="reference internal" href="casepy.html#n-th-permutation"><spa
 </pre></div>
 </div>
 </section>
+<section id="quick-start">
+<h2>Quick Start<a class="headerlink" href="#quick-start" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">casepy</span>
+
+<span class="n">element_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+
+<span class="n">all_combinations</span> <span class="o">=</span> <span class="n">casepy</span><span class="o">.</span><span class="n">all_combinations</span><span class="p">(</span><span class="n">element_list</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="c1"># [[1, 2], [1, 3], [1, 4], [2, 2], [2, 3], [2, 4], [3, 4]]</span>
+
+<span class="n">all_permutations</span> <span class="o">=</span> <span class="n">casepy</span><span class="o">.</span><span class="n">all_permutations</span><span class="p">(</span><span class="n">test_list</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="c1"># [[1, 2], [1, 3], [1, 4], [2, 1], [2, 2], [2, 3], [2, 4], [3, 1], [3, 2], [3, 4], [4, 1], [4, 2], [4, 3]]</span>
+</pre></div>
+</div>
+</section>
 <section id="contents">
 <h2>Contents<a class="headerlink" href="#contents" title="Link to this heading"></a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="casepy.html">Casepy package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="casepy.html#casepy-instant-methods">casepy (instant methods)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="casepy.html#casepy.instant_method.total_n_permutation"><code class="docutils literal notranslate"><span class="pre">instant_method.total_n_permutation()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="casepy.html#casepy.instant_method.all_permutation"><code class="docutils literal notranslate"><span class="pre">instant_method.all_permutation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="casepy.html#casepy.instant_method.all_permutations"><code class="docutils literal notranslate"><span class="pre">instant_method.all_permutations()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="casepy.html#casepy.instant_method.n_th_permutation"><code class="docutils literal notranslate"><span class="pre">instant_method.n_th_permutation()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="casepy.html#casepy.instant_method.n_to_m_th_permutation"><code class="docutils literal notranslate"><span class="pre">instant_method.n_to_m_th_permutation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="casepy.html#casepy.instant_method.n_to_m_th_permutations"><code class="docutils literal notranslate"><span class="pre">instant_method.n_to_m_th_permutations()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="casepy.html#casepy.instant_method.all_combinations"><code class="docutils literal notranslate"><span class="pre">instant_method.all_combinations()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="casepy.html#casepy.instant_method.n_th_combination"><code class="docutils literal notranslate"><span class="pre">instant_method.n_th_combination()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="casepy.html#casepy.instant_method.n_to_m_th_combinations"><code class="docutils literal notranslate"><span class="pre">instant_method.n_to_m_th_combinations()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="casepy.html#casepy-permutation-generator">casepy.permutation_generator</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="casepy.html#casepy.PermutationGenerator"><code class="docutils literal notranslate"><span class="pre">PermutationGenerator</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="casepy.html#casepy.PermutationGenerator.all_case"><code class="docutils literal notranslate"><span class="pre">PermutationGenerator.all_case()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="casepy.html#casepy.PermutationGenerator.all_case_new"><code class="docutils literal notranslate"><span class="pre">PermutationGenerator.all_case_new()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="casepy.html#casepy.PermutationGenerator.all_cases"><code class="docutils literal notranslate"><span class="pre">PermutationGenerator.all_cases()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="casepy.html#casepy.PermutationGenerator.n_th_case"><code class="docutils literal notranslate"><span class="pre">PermutationGenerator.n_th_case()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="casepy.html#casepy.PermutationGenerator.n_to_m_th_case"><code class="docutils literal notranslate"><span class="pre">PermutationGenerator.n_to_m_th_case()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="casepy.html#casepy.PermutationGenerator.possible_cases"><code class="docutils literal notranslate"><span class="pre">PermutationGenerator.possible_cases()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="casepy.html#casepy.PermutationGenerator.random_case"><code class="docutils literal notranslate"><span class="pre">PermutationGenerator.random_case()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="casepy.html#casepy.PermutationGenerator.n_to_m_th_cases"><code class="docutils literal notranslate"><span class="pre">PermutationGenerator.n_to_m_th_cases()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="casepy.html#casepy.PermutationGenerator.set_parameters"><code class="docutils literal notranslate"><span class="pre">PermutationGenerator.set_parameters()</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="casepy.html#id1">casepy.permutation_generator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="casepy.html#casepy-combination-generator">casepy.combination_generator</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="casepy.html#casepy.CombinationGenerator"><code class="docutils literal notranslate"><span class="pre">CombinationGenerator</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="casepy.html#casepy.CombinationGenerator.all_case"><code class="docutils literal notranslate"><span class="pre">CombinationGenerator.all_case()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="casepy.html#casepy.CombinationGenerator.case_to_i"><code class="docutils literal notranslate"><span class="pre">CombinationGenerator.case_to_i()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="casepy.html#casepy.CombinationGenerator.combination_core"><code class="docutils literal notranslate"><span class="pre">CombinationGenerator.combination_core()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="casepy.html#casepy.CombinationGenerator.i_case"><code class="docutils literal notranslate"><span class="pre">CombinationGenerator.i_case()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="casepy.html#casepy.CombinationGenerator.random_case"><code class="docutils literal notranslate"><span class="pre">CombinationGenerator.random_case()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="casepy.html#casepy.CombinationGenerator.set_must_have_elements"><code class="docutils literal notranslate"><span class="pre">CombinationGenerator.set_must_have_elements()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="casepy.html#casepy.CombinationGenerator.all_cases"><code class="docutils literal notranslate"><span class="pre">CombinationGenerator.all_cases()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="casepy.html#casepy.CombinationGenerator.n_th_case"><code class="docutils literal notranslate"><span class="pre">CombinationGenerator.n_th_case()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="casepy.html#casepy.CombinationGenerator.n_to_m_th_cases"><code class="docutils literal notranslate"><span class="pre">CombinationGenerator.n_to_m_th_cases()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="casepy.html#casepy.CombinationGenerator.set_parameters"><code class="docutils literal notranslate"><span class="pre">CombinationGenerator.set_parameters()</span></code></a></li>
 </ul>
 </li>
@@ -149,6 +159,13 @@ Using the <a class="reference internal" href="casepy.html#n-th-permutation"><spa
 <li class="toctree-l3"><a class="reference internal" href="version_history/v0.1.0.html#modified-features">Modified Features</a></li>
 <li class="toctree-l3"><a class="reference internal" href="version_history/v0.1.0.html#deleted-features">Deleted Features</a></li>
 <li class="toctree-l3"><a class="reference internal" href="version_history/v0.1.0.html#bug-fixes">Bug Fixes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="version_history.html#jun-2024">0.2.0 (Jun 2024)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="version_history/v0.2.0.html">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="version_history/v0.2.0.html#modified-features">Modified Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="version_history/v0.2.0.html#deleted-features">Deleted Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="version_history/v0.2.0.html#bug-fixes">Bug Fixes</a></li>
 </ul>
 </li>
 </ul>
