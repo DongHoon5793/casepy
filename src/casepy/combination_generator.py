@@ -24,6 +24,13 @@ class CombinationGenerator:
         self.must_have_elements = False
 
     def set_parameters(self, in_number_of_selection: int, element_list: list):
+        """
+        Initialize the CombinationGenerator with the given number of selections and the element list.
+
+        Args:
+            in_number_of_selection (int): The number of selections.
+            element_list (list): The list of elements.
+        """
         self.in_number_of_selection = in_number_of_selection
         self.element_list = element_list
 
@@ -32,6 +39,12 @@ class CombinationGenerator:
         # self.max_possible = combination_total(len(element_list), in_number_of_selection)
 
     def all_case(self):
+        """
+        Return all possible combinations of the list.
+
+        Returns:
+            list: All possible combinations of the list.
+        """
         return self._recursive_combination(
             list_to_bin_dict(self.element_list), self.in_number_of_selection
         )
