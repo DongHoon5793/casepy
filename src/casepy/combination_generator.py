@@ -1,5 +1,5 @@
 from .simple_methods import combination_total, all_combinations_unique_elements
-import random
+from .utils import list_to_bin_dict
 
 
 class CombinationGenerator:
@@ -29,158 +29,48 @@ class CombinationGenerator:
 
         self.element_list_initialized = True
         self.number_of_selection_initialized = True
-        self.max_possible = combination_total(len(element_list), in_number_of_selection)
+        # self.max_possible = combination_total(len(element_list), in_number_of_selection)
 
-    def _select_type(in_number_of_selection: int, in_bin_dict: dict) -> list:
-        all_possible_selection = []
+    def all_case(self):
+        return self._recursive_combination(
+            list_to_bin_dict(self.element_list), self.in_number_of_selection
+        )
 
-        # Select all possible types
-        for i_length in range(in_number_of_selection):
-            all_possible_selection += all_combinations_unique_elements(
-                i_length + 1, list(in_bin_dict.keys())
-            )
-
-        # Filter out depending on the number of selection
+    def _recursive_combination(self, in_dict: dict, left_length: int, initial=True):
         result = []
-
-        for selected_types in all_possible_selection:
-            selected_types_possible_number = 0
-            for type in selected_types:
-                selected_types_possible_number += in_bin_dict[type]
-            if selected_types_possible_number >= in_number_of_selection:
-                result.append(selected_types)
-
+        if left_length == 1:
+            for key in in_dict.keys():
+                if in_dict[key] > 0:
+                    result.append([key])
+            return result
+        if left_length > 0:
+            for key in in_dict.keys():
+                if in_dict[key] > 0:
+                    temp_dict = in_dict.copy()
+                    temp_dict[key] -= 1
+                    temp_result = self._recursive_combination(
+                        temp_dict, left_length - 1, False
+                    )
+                    for temp in temp_result:
+                        result.append([key] + temp)
+            if initial:
+                sorted_result = list(map(lambda x: sorted(x), result))
+                filtered_result = []
+                for i in sorted_result:
+                    if i not in filtered_result:
+                        filtered_result.append(i)
+                return filtered_result
+            return result
         return result
 
     def n_th_case(self, in_iterator: int) -> list:
-        return self.combination_core(
-            in_iterator, self.in_number_of_selection, self.element_list
-        )
+        return self.all_case()[in_iterator]
 
-    def set_must_have_elements(self, in_elements_list: list):
-        self.must_have_elements = True
-        self.must_have_list = in_elements_list
-        for element in in_elements_list:
-            self.element_list.remove(element)
-
-        self.in_number_of_selection -= len(in_elements_list)
-        self.max_possible = combination_total(
-            len(self.element_list), self.in_number_of_selection
-        )
-
-    def all_case(self) -> list:
-        if not self.element_list_initialized:
-            raise Exception("element_list is not initialized")
-        if not self.number_of_selection_initialized:
-            raise Exception("number_of_selection is not initialized")
-
-        result_list = []
-        for i in range(self.max_possible):
-            result_list.append(
-                self.combination_core(i, self.in_number_of_selection, self.element_list)
+    def n_to_m_th_case(self, in_n_iterator: int, in_m_iterator: int) -> list:
+        result = self.all_case()
+        if in_m_iterator > len(result):
+            print(
+                "The m-th iterator is larger than the number of all possible combinations."
             )
-        return result_list
-
-    def random_case(self, return_i=False) -> list:
-        if not self.element_list_initialized:
-            raise Exception("element_list is not initialized")
-        if not self.number_of_selection_initialized:
-            raise Exception("number_of_selection is not initialized")
-
-        random_i = (int)(random.random() * self.max_possible)
-
-        if return_i:
-            return random_i, self.combination_core(
-                random_i,
-                self.in_number_of_selection,
-                self.element_list,
-            )
-        return self.combination_core(
-            random_i,
-            self.in_number_of_selection,
-            self.element_list,
-        )
-
-    def i_case(self, in_iterator: int) -> list:
-        if not self.element_list_initialized:
-            raise Exception("element_list is not initialized")
-        if not self.number_of_selection_initialized:
-            raise Exception("number_of_selection is not initialized")
-
-        return self.combination_core(
-            in_iterator, self.in_number_of_selection, self.element_list
-        )
-
-    # def combination_case(self, in_iterator: int, in_number_of_selection: int) -> list:
-    #     if self.element_list_initialized:
-    #         raise Exception("element_list is not initialized")
-    #     return self.combination_case(
-    #         in_iterator, in_number_of_selection, self.element_list
-    #     )
-
-    def case_to_i(self, in_case: list) -> int:
-
-        include_elements_iterator_list = []
-        for element in in_case:
-            include_elements_iterator_list.append(self.element_list.index(element))
-        include_elements_iterator_list.sort()
-
-        start_index = 0
-        result = 0
-        for i in include_elements_iterator_list:
-            if i == start_index:
-                start_index += 1
-            else:
-                result += combination_total(
-                    i, self.in_number_of_selection - start_index
-                )
-                start_index += 1
-            print(result, start_index)
-        print("include_elements_iterator_list", include_elements_iterator_list)
-
-        return result
-
-    def combination_core(
-        self, in_iterator: int, in_number_of_selection: int, element_list: list
-    ) -> list:
-        result_list = []
-        number_of_elements = len(element_list)
-        max_possible = combination_total(number_of_elements, in_number_of_selection)
-
-        if in_iterator >= max_possible:
-            return []
-
-        target_iterator = 0
-        while True:
-            if in_number_of_selection == 0:
-                break
-
-            test = combination_total(number_of_elements - 1, in_number_of_selection - 1)
-
-            if in_iterator >= test:
-                in_iterator -= test
-
-                number_of_elements -= 1
-
-                target_iterator += 1
-
-            else:
-                result_list.append(element_list[target_iterator])
-
-                number_of_elements -= 1
-                in_number_of_selection -= 1
-
-                target_iterator += 1
-
-        if self.must_have_elements:
-            for element in self.must_have_list:
-                result_list.append(element)
-
-        return sorted(result_list)
-
-
-if __name__ == "__main__":
-    generator = CombinationGenerator()
-    generator.set_parameters(4, [1, 2, 3, 4, 5])
-
-    print(generator.all_case())
+            in_m_iterator = len(result)
+        return self.all_case()[in_n_iterator:in_m_iterator]

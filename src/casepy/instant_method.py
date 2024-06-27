@@ -122,7 +122,7 @@ def total_n_combination(in_list: list, in_number_of_select: int) -> int:
         6
     """
     instance = CombinationGenerator()
-    instance.set_parameters(in_list, in_number_of_select)
+    instance.set_parameters(in_number_of_select, in_list)
     return instance.possible_cases()
 
 
@@ -145,7 +145,7 @@ def all_combination(in_list: list, in_number_of_select: int) -> list:
         [[1, 2], [1, 3], [2, 3]]
     """
     instance = CombinationGenerator()
-    instance.set_parameters(in_list, in_number_of_select)
+    instance.set_parameters(in_number_of_select, in_list)
 
     return instance.all_case()
 
@@ -170,7 +170,7 @@ def n_th_combination(in_iterator: int, in_list: list, in_number_of_select: int) 
         [2, 3]
     """
     instance = CombinationGenerator()
-    instance.set_parameters(in_list, in_number_of_select)
+    instance.set_parameters(in_number_of_select, in_list)
 
     return instance.n_th_case(in_iterator)
 
@@ -198,6 +198,6 @@ def n_to_m_th_combination(
         [[2, 3], [3, 1], [3, 2]]
     """
     instance = CombinationGenerator()
-    instance.set_parameters(in_list, in_number_of_select)
+    instance.set_parameters(in_number_of_select, in_list)
 
     return instance.n_to_m_th_case(in_n_iterator, in_m_iterator)

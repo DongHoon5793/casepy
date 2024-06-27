@@ -22,6 +22,4 @@ def list_to_bin_dict(in_list: list) -> dict:
         else:
             result_dict[i] += 1
 
-    result_list = list(result_dict.values())
-    # return result_list, element_type_list
     return result_dict
