@@ -1,5 +1,5 @@
 from .simple_methods import *
-from .utils import *
+from .utils import list_to_bin_dict
 import random
 
 
@@ -165,7 +165,7 @@ class PermutationGenerator:
         if not in_iterator < self.max_possible:
             return []
 
-        bin_list, element_list = in_list_to_bin(self.element_list)
+        bin_list, element_list = list_to_bin_dict(self.element_list)
 
         result_iterator = self.__permutation_recursive(
             in_iterator, bin_list, self.in_number_of_selection
